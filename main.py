@@ -29,17 +29,24 @@ class Hex:
 # This is the entry point. class declaration below.
 # Todo: After finishing class construction refactor code so Hex becomes a loadable module.
 if __name__ == '__main__':
-    test = Hex(1, 1)
-    test_a = Hex(0, 0)
-    test_b = Hex(5, 5)
-    print(test_a.dist(test_b))
-    for i in test.neighbor():
-        print(i)
+    testing = 0
+    if testing:
+        test = Hex(1, 1)
+        test_a = Hex(0, 0)
+        test_b = Hex(5, 5)
+        print(test_a.dist(test_b))
+        for i in test.neighbor():
+            print(i)
     file = open(sys.argv[1])
+    # data is a dict object
     data = json.load(file)
 
+    # start working here
+    start = Hex(data["start"][0],data["start"][1])
+    goal = Hex(data["goal"][0], data["goal"][1])
 
-# Todo: need to get json parser up and running
+
+# Done: need to get json parser up and running
 # Done: implement distance calculation between two hex grid
 # Update: test this Michael
 # Todo: A star algorithm

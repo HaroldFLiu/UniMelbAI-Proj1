@@ -33,6 +33,6 @@ if __name__ == '__main__':
         print(i)
 
 # Todo: need to get json parser up and running
-# Todo: implement distance calculation between two hex grid
+# Done: implement distance calculation between two hex grid
 # Update: test this Michael
 # Todo: A star algorithm

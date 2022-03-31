@@ -1,3 +1,7 @@
+import json
+import sys
+
+
 class Hex:
     def __init__(self, x, y):
         self.x = x
@@ -31,6 +35,9 @@ if __name__ == '__main__':
     print(test_a.dist(test_b))
     for i in test.neighbor():
         print(i)
+    file = open(sys.argv[1])
+    data = json.load(file)
+
 
 # Todo: need to get json parser up and running
 # Done: implement distance calculation between two hex grid

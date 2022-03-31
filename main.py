@@ -3,9 +3,10 @@ import sys
 
 
 class Hex:
-    def __init__(self, x, y):
+    def __init__(self, x, y, color='n'):
         self.x = x
         self.y = y
+        self.color = color
 
     def __str__(self):
         return f"({self.x},{self.y})"
@@ -42,8 +43,11 @@ if __name__ == '__main__':
     data = json.load(file)
 
     # start working here
-    start = Hex(data["start"][0],data["start"][1])
+    start = Hex(data["start"][0], data["start"][1])
     goal = Hex(data["goal"][0], data["goal"][1])
+    board = []
+    for i in data["board"]:
+        board.append(Hex(i[1], i[2], i[0]))
 
 
 # Done: need to get json parser up and running

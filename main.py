@@ -10,9 +10,12 @@ class Hex:
         pass
 
 
-# Press the green button in the gutter to run the script.
+# This is the entry point. class declaration below.
+# Todo: After finishing class construction refactor code so Hex becomes a loadable module.
 if __name__ == '__main__':
     test = Hex(0, 0)
     print(test)
 
-# See PyCharm help at https://www.jetbrains.com/help/pycharm/
+# Todo: need to get json parser up and running
+# Todo: implement distance calculation between two hex grid
+# Todo: A star algorithm

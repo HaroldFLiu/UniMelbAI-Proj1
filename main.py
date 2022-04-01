@@ -7,9 +7,19 @@ class Hex:
         self.x = x
         self.y = y
         self.color = color
+        self.prev = None
 
     def __str__(self):
         return f"({self.x},{self.y})"
+
+    def __eq__(self, other):
+        if isinstance(self.__class__, other):
+            return self.__dict__ == other.__dict__
+        else:
+            return False
+
+    def __ne__(self, other):
+        return not self.__eq__(other)
 
     def dist(self, other):
         vec_x = (self.x - other.x)
@@ -48,6 +58,11 @@ if __name__ == '__main__':
     board = []
     for i in data["board"]:
         board.append(Hex(i[1], i[2], i[0]))
+
+    # start a star
+    target = [start]
+    while len(target):
+        pass
 
 
 # Done: need to get json parser up and running

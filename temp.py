@@ -86,7 +86,6 @@ if __name__ == '__main__':
             closed.append(current)
 
             if current == goal:
-                print("Goal Found")
                 path = []
                 current_node = current
                 while current_node is not None:
@@ -122,6 +121,7 @@ if __name__ == '__main__':
     if path == None:
         print(0)
     else:
+        print(len(path))
         for i in path[::-1]:
             print(i)
     

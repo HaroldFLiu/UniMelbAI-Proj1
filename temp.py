@@ -59,7 +59,10 @@ if __name__ == '__main__':
     data = json.load(file)
 
     # start working here
+<<<<<<< HEAD
     boardsize = data["n"]
+=======
+>>>>>>> bb34252005fa4320281950d84cd2dfec77f30281
     start = Hex(data["start"][0], data["start"][1], 'n')
     goal = Hex(data["goal"][0], data["goal"][1], 'n')
     board = []

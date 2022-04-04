@@ -59,10 +59,10 @@ if __name__ == '__main__':
     data = json.load(file)
 
     # start working here
-<<<<<<< HEAD
+    # <<<<<<< HEAD
     boardsize = data["n"]
-=======
->>>>>>> bb34252005fa4320281950d84cd2dfec77f30281
+    # =======
+    # >>>>>>> bb34252005fa4320281950d84cd2dfec77f30281
     start = Hex(data["start"][0], data["start"][1], 'n')
     goal = Hex(data["goal"][0], data["goal"][1], 'n')
     board = []
@@ -74,7 +74,6 @@ if __name__ == '__main__':
         openlist = []
         closed = []
         openlist.append(start)
-        current = start
 
         while len(openlist) > 0:
             cur_index = 0
@@ -84,7 +83,7 @@ if __name__ == '__main__':
 
             # explore this
             current = openlist[cur_index]
-            #print(current)
+            # print(current)
             openlist.pop(cur_index)
             closed.append(current)
 
@@ -121,13 +120,12 @@ if __name__ == '__main__':
 
 
     path = astar()
-    if path == None:
+    if path is None:
         print(0)
     else:
         print(len(path))
         for i in path[::-1]:
             print(i)
-    
 
 # Done: need to get json parser up and running
 # Done: implement distance calculation between two hex grid

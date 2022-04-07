@@ -24,6 +24,15 @@ class Hex:
     def __ne__(self, other):
         return not self.__eq__(other)
 
+    def __eq__(self, other):
+        if isinstance(self.__class__, other):
+            return self.__dict__ == other.__dict__
+        else:
+            return False
+
+    def __ne__(self, other):
+        return not self.__eq__(other)
+
     def dist(self, other):
         vec_r = (self.r - other.r)
         vec_q = (self.q - other.q)
@@ -57,6 +66,11 @@ if __name__ == '__main__':
     board = []
     for i in data["board"]:
         board.append(Hex(i[1], i[2], i[0]))
+
+    # start a star
+    target = [start]
+    while len(target):
+        pass
 
 
     def astar():
